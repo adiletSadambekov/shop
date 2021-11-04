@@ -1,0 +1,14 @@
+.content {
+    background-color: rgb(218, 194, 164);
+    padding: 40px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 500px;
+}
+
+.okno {
+    background-color: cyan;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+}

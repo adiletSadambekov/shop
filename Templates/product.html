@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/product.css') }}">
+{% endblock link %}
+{% block main %}
+{{ super() }}
+<div class="theproduct_conteiner">
+    <div class="theproduct">
+        {% for p in product %}
+        <div class="product_item">
+            <img class="photo_theproduct" src="https://www.shop.volteh.ru/upload/iblock/0d4/0d47f18ee46b7dc9fcd153a49c400cee.jpeg" alt="">
+            <h1>{{ p.name }}</h1>
+            <p>{{ p.price }}</p>
+            <p>{{ p.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock main %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/paystyle.css') }}">
+{% endblock link %}
+{% block main %}
+{{ super() }}
+    <div class="content">
+    {% for r in red %}
+    <div class="okno">{{r}}</div>
+    {% endfor %}
+    </div> 
+{% endblock main %}

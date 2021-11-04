@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block wrapper %}
+    {{ super() }}
+{% endblock %}
+
+    {% block main %}
+    <main>
+        <div class="main__welcom">
+            <h1>Добро пожаловать в <span class="company_name">Название</span></h1>
+            <p>We are a digital agency with years of experience and with extraordinary people</p>
+        </div>
+            <div class="wrapper">
+                <div class="main__about">
+                    <div class="about__left">
+                        <img class="mw_100" src="{{ url_for('static',filename='css/images/mac.png') }}" alt="mac">
+                    </div>
+
+                     <div class="about__right">
+                        <h1>Some words about us</h1>
+                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ex quidem maiores ullam quis, at asperiores minus ad eaque maxime possimus .</p>
+                        <ul>
+                            <li>Mission - We deliver uniqueness and quality</li>
+                             <li>kills - Delivering fast and excellent results</li>
+                             <li>lients - Satisfied clients thanks to our experience</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+                <div class="main_team">
+                    <div class="wrapper">
+                        <h1>our team</h1>
+
+                        <div class="line"></div>
+
+                        <div class="team_cards">
+                            {% for p in products %}
+                            <div class="card">
+                                <div class="photo"><img class="main_photo" src="{{ url_for('static',filename='css/images/main.png') }}" alt="main"></div>
+                                <h4 class="name">{{ p.name }}</h4>
+                                <p class="position">{{ p.des }}</p>
+                                <p class="about_position">{{ p.price }}</p>
+                            </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            {% endblock %}    
+            <script src="{{ url_for('static',filename='js/base.js') }}"></script>
+    </main>
+
+</html>

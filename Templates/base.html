@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+    <link type="text/css" href="{{ url_for('static',filename='css/base.css') }}" rel="stylesheet"/>
+{% if title %}
+    <title>{{title}}</title>
+{% else %}
+    <title>Доступная мода</title>
+{% endif %}
+</head>
+<body>
+    <header>
+        {% block whapper %}
+
+        <div class="header__logo"><p>Название лого</p></div>
+
+            <nav>
+                <div class="topnav" id="mytopnav">
+                    <a id="menu" class="icon" href="#">&#9776</a>
+                    {% for ref in refs %}
+                    <a href="{{ref.url}}">{{ref.name}}</a>
+                    {% endfor %}
+            
+                </div>
+                </nav>
+            {% endblock whapper %}
+            <script src="{{ url_for('static',filename='js/base.js') }}"></script>
+    </header>
+        {% block main %}
+        {% endblock main %}
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+.anvantages__conteiner{
+    display: flex;
+    justify-content: center;
+}
+
+.advantages{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.advantages__item{
+    height: 30%;
+    width: 30%;
+    padding-top: 40px;
+    padding-left: 20px;
+}
+ 
+.mw-100{
+    width: 50%;
+    height: 70%;
+    max-width: 100%;
+}

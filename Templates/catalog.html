@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/catalogstyle.css') }}">
+{% endblock link %}
+{% block main %}
+{{ super() }}
+<div class="anvantages__conteiner">
+    <div class="advantages">
+        {% for name in inf %}
+        <div class="advantages__item">
+            <img class="mw-100" src="https://www.shop.volteh.ru/upload/iblock/0d4/0d47f18ee46b7dc9fcd153a49c400cee.jpeg" alt="">
+            <a href="{{ url_for('showproduct', product_id=name.product_id) }}"><h1>{{ name.name }}</h1>
+            <p>{{ name.description[:10] }}</p>
+            <p>{{ name.price }}</p></a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock main %}
+
